@@ -31,15 +31,33 @@ Next, the image goes through this pre-trained CNN and gives a feature map as an 
 The biggest problem is to set the parameter value for the network. Parameters such as Learning rate, batch-size, rpn_ratios, and IOU_threshold are very important to get better accuracy while training. The RPN is the one layer which is very important in this network. The following image shows how the rpn works:
 
 
-![alt text] (https://miro.medium.com/max/1126/1*wpyZTK62emDpTE_Wbza9oA.png)
+![alt text](https://miro.medium.com/max/3224/1*1Mj0C4wzi57Z6Z933gb6vA.png)
 
 
 # Evaluation
 
-Faster R-CNN gave great accuracy scores. When experimented with SSD( Single Shot Detector), the overall loss while training was way less and gradually decreased while the training proceeded. Although it takes fair amount of time setting the anchors and bounding box thresholds, ultimately the accuracy scores got high up to 97%. When compared to SSD, the accuracy was better each time we trained. The output of SSD is a prediction map. Each location in this map stores classes confidence and bounding box information as if there is indeed an object of interests at every location. While testing was a completely different story, while first experimenting with Faster R-CNN, while testing the accuracy did not show correct, but as we started the training the model more and used the previously trained weights for the next training, the testing results started increasing too. The following are the tests performed on five images.
+Faster R-CNN gave great accuracy scores. When experimented with SSD( Single Shot Detector), the overall loss while training was way less and gradually decreased while the training proceeded. Although it takes fair amount of time setting the anchors and bounding box thresholds, ultimately the accuracy scores got high up to 97%. When compared to SSD, the accuracy was better each time we trained. The output of SSD is a prediction map. Each location in this map stores classes confidence and bounding box information as if there is indeed an object of interests at every location. While testing was a completely different story, while first experimenting with Faster R-CNN, while testing the accuracy did not show correct, but as we started the training the model more and used the previously trained weights for the next training, the testing results started increasing too. The following are the tests performed on images.
+
+The SSD uses a sliding window instead of an RPN layer, which can be one of the main reasons as to why the there Faster R-CNN performs better.
+
+
+    #SSD Test Prediction#
+
+
+![Capture1](https://user-images.githubusercontent.com/40818193/65600970-847f8d00-dfe4-11e9-9ce4-2269fdc1971f.PNG)
 
 
 
+    #Faster R-CNN#
+    
+
+![Capture](https://user-images.githubusercontent.com/40818193/65601264-17202c00-dfe5-11e9-93e1-7d09e32501a1.PNG)
+
+
+
+#Ethical Utilitarian Model
+
+The mindset and morals of one are very important when it comes to not only using Machine Learning but data itself. Though, focusing on Machine Learning, different kinds of data can be manipulated and misused on a large scale. The model defines or differentiates right and wrong from the outcomes produced at the end. It is believed that the best outcome is the one which serves for betterment of the most widest audience. Using this Machine Learning model with the wrong idea in the head is fairly easy with the upcoming new technology, it is easy to use these models for applications which can serve as major harm to the society. Object Detection models are widely used from on-street  vehicles detection, satellite imagery, and underwater species detection. Many of these models are used by highly confidential military and government organisations. Those kind of data and the results obtained by those applications can be very harmful if they fall in the wrong hands. Hence, the Utilitarian model of ethics should be followed to always keep in my the greater truth, abide its code of conduct and avoid getting into situations where one has to question their ethics.
 
 
 
